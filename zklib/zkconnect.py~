@@ -13,7 +13,7 @@ def zkconnect(self):
 
     buf = self.createHeader(command, chksum, session_id,
         reply_id, command_string)
-    print "addresS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",self.address
+    
     self.zkclient.sendto(buf, self.address)
     
     try:
