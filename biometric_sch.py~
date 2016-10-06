@@ -52,6 +52,8 @@ class orchid_service:
         machine_ip = machine_vals[0].replace("\r\n","")
         port = machine_vals[1].replace("\r\n","")
         
+        machine_ip = machine_ip.replace("\n","")
+        port = port.replace("\n","")
         zk = zklib.ZKLib(machine_ip, int(port))
         res = zk.connect()
         print "res>>>>>>>>>>>>>>>>>>>>>>>>>>",res
